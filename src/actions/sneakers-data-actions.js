@@ -1,0 +1,1 @@
+export const SET_SNEAKERS_DATA = 'SET_SNEAKERS_DATA';
