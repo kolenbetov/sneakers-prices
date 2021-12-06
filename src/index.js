@@ -1,14 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './index.css';
 import { Provider } from 'react-redux';
 import store from './store/store';
-import App from './App';
+import SneakersSearchApp from './sneakers-search-app';
+import SneakerDataContainer from './components/sneaker-data/sneaker-data';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router>
+      <Routes>
+        <Route exact path='/' element={<SneakersSearchApp />} />
+        <Route path='/sneaker/:urlKey' element={<SneakerDataContainer />} />
+      </Routes>
+    </Router>
   </Provider>,
 
   document.getElementById('root')
