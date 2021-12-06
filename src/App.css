@@ -1,0 +1,117 @@
+.body {
+  margin: 30px;
+}
+
+.sneaker-search-form input {
+  width: 360px;
+  background: #fafafa;
+  color: grey;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  outline: 0;
+  padding: 12px 12px;
+}
+
+.sneaker-search-form button {
+  background: #dddada;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  padding: 12px 12px;
+}
+
+.sneaker-search-form button:hover {
+  background: #c3bfbf;
+  border: 1px solid grey;
+  border-radius: 3px;
+  padding: 12px 12px;
+}
+
+.small-image {
+  max-width: 150px;
+}
+
+.large-image {
+  max-width: 400px;
+}
+
+.grid-container {
+  max-width: 100%;
+}
+
+.grid {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 110px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  margin: 0 5px;
+  transition: 0.3s;
+}
+
+.column:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.column-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  padding: 10px 0;
+  border-bottom: 2px solid lightgray;
+}
+
+.column-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-price {
+  padding-top: 5px;
+  padding-bottom: 3px;
+  font-weight: 300;
+}
+
+.sale-date {
+  padding-top: 3px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid grey;
+  font-weight: 200;
+}
+
+.card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.card-deck .sneaker-card {
+  display: flex;
+  max-width: 180px;
+  flex: 1 0 15%;
+  flex-direction: column;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.card-deck .sneaker-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.sneaker-card-title {
+  padding-left: 10px;
+}
