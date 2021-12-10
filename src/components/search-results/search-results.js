@@ -19,11 +19,6 @@ export const SearchResultsContainer = ({ results, onSelectSneaker }) => {
               </Link>
               <span className='sneaker-card-title'>{sneaker.title}</span>
             </div>
-            //   <SneakerCard
-            //     image={sneaker.media.smallImageUrl}
-            //     title={sneaker.title}
-            //     urlKey={sneaker.urlKey}
-            //   />
           ))}
     </div>
   );
