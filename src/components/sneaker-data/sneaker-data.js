@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { clearSneakerSalesData } from '../../actions/search-results-actions';
 import { SizeSalesColumnContainer } from './size-sales-column';
+import { sizes } from '../../sizes/nike-sizes';
 
 export const SneakerDataContainer = ({
   sneakerData,
@@ -38,7 +39,9 @@ export const SneakerDataContainer = ({
                     return (
                       <SizeSalesColumnContainer
                         key={sneakerSize}
-                        sneakerSize={sneakerSize}
+                        sneakerSize={`${sneakerSize} (${
+                          sizes[sneakerData.gender][sneakerSize]
+                        })`}
                         salesDataBySize={sneakerData.salesData[sneakerSize]}
                       />
                     );
