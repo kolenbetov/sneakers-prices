@@ -17,10 +17,14 @@ export const SneakerDataContainer = ({
     ''
   ) : (
     <div>
-      <h2>{sneakerData.shoe}</h2>
-      <h3>{sneakerData.name}</h3>
-      <p>SKU: {sneakerData.styleId}</p>
-      <img className='large-image' src={sneakerData.media.imageUrl} alt='' />
+      <div className='sneaker-header_name'>{sneakerData.shoe}</div>
+      <div className='sneaker-info-container'>
+        <img className='large-image' src={sneakerData.media.imageUrl} alt='' />
+        <div className='sneaker-info-details'>
+          <h3>{sneakerData.name}</h3>
+          <p>SKU: {sneakerData.styleId}</p>
+        </div>{' '}
+      </div>
       <div className='grid-container'>
         <div className='grid'>
           {sneakerData.salesData == null
