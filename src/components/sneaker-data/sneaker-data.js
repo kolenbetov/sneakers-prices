@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { clearSneakerSalesData } from '../../actions/search-results-actions';
 import { SizeSalesColumnContainer } from './size-sales-column';
 import { sizes } from '../../sizes/nike-sizes';
@@ -14,11 +15,14 @@ export const SneakerDataContainer = ({
     };
   }, []);
 
-  return sneakerData == null ? (
-    ''
-  ) : (
+  return sneakerData != null && Object.keys(sneakerData).length > 0 ? (
     <div>
-      <div className='sneaker-header_name'>{sneakerData.shoe}</div>
+      <div className='sneaker-header'>
+        <Link to={{ pathname: `/` }} className='sneaker-header_back-link'>
+          {'< go back to results'}
+        </Link>
+        <div className='sneaker-header_name'>{sneakerData.shoe}</div>
+      </div>
       <div className='sneaker-info-container'>
         <img className='large-image' src={sneakerData.media.imageUrl} alt='' />
         <div className='sneaker-info-details'>
@@ -49,6 +53,8 @@ export const SneakerDataContainer = ({
         </div>
       </div>
     </div>
+  ) : (
+    ''
   );
 };
 
